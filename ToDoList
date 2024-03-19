@@ -1,0 +1,38 @@
+package ToDoList;
+
+import java.util.*;
+
+public class ToDoList {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        ArrayList<String> todolist = new ArrayList<>();
+        Random random = new Random();
+        while (true) {
+            System.out.println("1. add task ");
+            System.out.println("2. view tasks");
+            System.out.println("exit");
+            System.out.println("Enter your choice: ");
+
+            int options = sc.nextInt();
+            sc.nextLine();
+
+            switch(option){
+                case 1:
+                    addtask(sc,todolist);
+                    break;
+                case 2:
+                    viewtasks(todolist);
+                    break;
+                case 3:
+                    System.out.println("Exiting the Program. GOODBYE!!!");
+                    System.exit(0);
+                default:
+                    System.out.println("Invalid Choice. Enter the valid option");
+                        
+
+            }
+        }
+    }
+    
+}
