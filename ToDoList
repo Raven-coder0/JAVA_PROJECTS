@@ -11,13 +11,13 @@ public class ToDoList {
         while (true) {
             System.out.println("1. add task ");
             System.out.println("2. view tasks");
-            System.out.println("exit");
+            System.out.println("3. exit");
             System.out.println("Enter your choice: ");
 
             int options = sc.nextInt();
             sc.nextLine();
 
-            switch(option){
+            switch(options){
                 case 1:
                     addtask(sc,todolist);
                     break;
@@ -34,5 +34,21 @@ public class ToDoList {
             }
         }
     }
+    private static void addtask(Scanner sc,  ArrayList<String> todolist){
+        System.out.println("enter the task ");
+        todolist.add(sc.nextLine());
+        System.out.println("Task Added!!\n");
+    }
+
+    private static void viewtasks (ArrayList<String> todolist) {
+        if (todolist.isEmpty()){
+            System.out.println("the To-Do-List is Empty !!");
+        }
+        else 
+        {
+            System.out.println("To-Do-List : \n"+ String.join(".\n",todolist)+".\n");
+        }
+    }
+
     
 }
